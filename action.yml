@@ -1,0 +1,26 @@
+---
+name: CleverCloud Deploy
+author: CleverCloud
+description: Deploy your application to Clevercloud
+inputs:
+  organisation_id:
+    description: "The organisation you want as context"
+    required: true
+  application_id:
+    description: "The application_id you want to deploy (Ex: app_xxx)"
+    required: true
+  oauth_token:
+    description: Oauth1 token (issued from a `clever-tools login`)
+    required: true
+  oauth_secret:
+    description: Oauth1 secret (issued from a `clever-tools login`)
+    required: true
+outputs: {}
+runs:
+  using: node16
+  pre: lib/pre.js
+  main: lib/index.js
+branding:
+  icon: cloud
+  color: red
+...
