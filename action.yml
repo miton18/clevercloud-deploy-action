@@ -1,0 +1,17 @@
+---
+name: CleverCloud Deploy
+author: CleverCloud
+description: Deploy your application to Clevercloud
+inputs:
+  application_id:
+    description: "The application_id you want to deploy (Ex: app_xxx)"
+    required: true
+outputs: {}
+runs:
+  using: node16
+  pre: lib/pre.js
+  main: lib/index.js
+branding:
+  icon: cloud
+  color: red
+...
